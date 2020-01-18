@@ -1,20 +1,19 @@
 package com.atguigu.gmall.pms.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
+import com.atguigu.gmall.pms.entity.AttrEntity;
+import com.atguigu.gmall.pms.service.AttrAttrgroupRelationService;
+import com.atguigu.gmall.pms.service.AttrService;
+import com.atguigu.gmall.pms.vo.AttrSaveVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import com.atguigu.gmall.pms.entity.AttrEntity;
-import com.atguigu.gmall.pms.service.AttrService;
+import java.util.Arrays;
 
 
 
@@ -32,6 +31,22 @@ import com.atguigu.gmall.pms.service.AttrService;
 public class AttrController {
     @Autowired
     private AttrService attrService;
+    @Autowired
+    private AttrAttrgroupRelationService relationService;
+
+
+    //http://127.0.0.1:8888/pms/attr?type=0&cid=225&t=1578056979217&limit=10&page=1
+
+    @GetMapping
+    public Resp<PageVo> queryAttrByCidAndAttrType(
+            @RequestParam(value = "type") Long type,
+            @RequestParam(value = "cid",required = false) Long cid,
+            QueryCondition queryCondition
+            ){
+
+        PageVo pageVo=this.attrService.queryAttrByCidAndAttrType(type,cid,queryCondition);
+        return Resp.ok(pageVo);
+    }
 
     /**
      * 列表
@@ -59,15 +74,17 @@ public class AttrController {
     }
 
     /**
+     * http://127.0.0.1:8888/pms/attr/save
      * 保存
      */
     @ApiOperation("保存")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('pms:attr:save')")
-    public Resp<Object> save(@RequestBody AttrEntity attr){
-		attrService.save(attr);
+    public Resp<Object> save(@RequestBody AttrSaveVo attrSaveVo){
+        //保存属性信息
 
-        return Resp.ok(null);
+        attrService.saveVo(attrSaveVo);
+        return Resp.ok("保存成功");
     }
 
     /**

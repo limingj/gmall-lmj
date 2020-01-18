@@ -8,10 +8,10 @@
 
 package com.atguigu.controller;
 
-import com.atguigu.utils.Query;
-import com.atguigu.utils.R;
+import com.atguigu.core.utils.Query;
+import com.atguigu.core.utils.R;
 import com.atguigu.service.SysGeneratorService;
-import com.atguigu.utils.PageUtils;
+import com.atguigu.core.utils.PageUtils;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

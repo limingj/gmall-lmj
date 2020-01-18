@@ -1,20 +1,19 @@
 package com.atguigu.gmall.pms.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
+import com.atguigu.gmall.pms.entity.CategoryEntity;
+import com.atguigu.gmall.pms.service.CategoryService;
+import com.atguigu.gmall.pms.vo.CategoryVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import com.atguigu.gmall.pms.entity.CategoryEntity;
-import com.atguigu.gmall.pms.service.CategoryService;
+import java.util.Arrays;
+import java.util.List;
 
 
 
@@ -32,6 +31,21 @@ import com.atguigu.gmall.pms.service.CategoryService;
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
+
+    @ApiOperation("index")
+    @GetMapping("{pid}")
+    public Resp<List<CategoryVo>> querysubCates(@PathVariable("pid") Long pid){
+        List<CategoryVo> CategoryVos=categoryService.querysubCates(pid);
+        return Resp.ok(CategoryVos);
+    }
+
+    @GetMapping
+    public Resp<List<CategoryEntity>> queryAllCategoryTree(@RequestParam(value = "level",defaultValue = "0") Integer level,
+                                                           @RequestParam(value = "parentCid",required = false) Long pid){
+        List<CategoryEntity> categoryEntities=categoryService.queryAllCategoryTree(level,pid);
+        return Resp.ok(categoryEntities);
+    }
+
 
     /**
      * 列表

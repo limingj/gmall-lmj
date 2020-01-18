@@ -11,7 +11,7 @@ import com.atguigu.core.bean.QueryCondition;
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-01-01 18:16:28
+ * @date 2019-09-02 01:23:51
  */
 public interface SpuImagesService extends IService<SpuImagesEntity> {
 

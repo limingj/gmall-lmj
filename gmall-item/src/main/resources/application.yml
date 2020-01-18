@@ -1,0 +1,13 @@
+server:
+  port: 8088
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+thread:
+  corePoolSize: 500
+  maximumPoolSize: 800
+  keepAliveTime: 30
+  unit: TimeUnit.SECONDS
+  workQueue: new ArrayBlockingQueue<>(1000000)

@@ -1,7 +1,10 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Map;
+
+import java.util.List;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -12,11 +15,14 @@ import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.gmall.pms.dao.AttrAttrgroupRelationDao;
 import com.atguigu.gmall.pms.entity.AttrAttrgroupRelationEntity;
 import com.atguigu.gmall.pms.service.AttrAttrgroupRelationService;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service("attrAttrgroupRelationService")
 public class AttrAttrgroupRelationServiceImpl extends ServiceImpl<AttrAttrgroupRelationDao, AttrAttrgroupRelationEntity> implements AttrAttrgroupRelationService {
 
+    @Autowired
+    private AttrAttrgroupRelationDao relationDao;
     @Override
     public PageVo queryPage(QueryCondition params) {
         IPage<AttrAttrgroupRelationEntity> page = this.page(
@@ -27,4 +33,15 @@ public class AttrAttrgroupRelationServiceImpl extends ServiceImpl<AttrAttrgroupR
         return new PageVo(page);
     }
 
+
+    @Transactional
+    @Override
+    public void deleteAttr(List<AttrAttrgroupRelationEntity> relationEntitys) {
+        relationEntitys.forEach(relationEntity -> {
+            this.remove(new QueryWrapper<AttrAttrgroupRelationEntity>()
+            .eq("attr_group_id",relationEntity.getAttrGroupId())
+            .eq("attr_id",relationEntity.getAttrId())
+            );
+        });
+    }
 }

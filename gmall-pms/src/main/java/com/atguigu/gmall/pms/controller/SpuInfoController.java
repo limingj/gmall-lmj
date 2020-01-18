@@ -1,22 +1,22 @@
 package com.atguigu.gmall.pms.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-
 import com.atguigu.core.bean.PageVo;
+import com.atguigu.core.bean.Query;
 import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
+import com.atguigu.gmall.pms.entity.SpuInfoEntity;
+import com.atguigu.gmall.pms.service.SpuInfoService;
+import com.atguigu.gmall.pms.vo.SpuInfoVo;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import com.atguigu.gmall.pms.entity.SpuInfoEntity;
-import com.atguigu.gmall.pms.service.SpuInfoService;
-
-
+import java.util.Arrays;
+import java.util.List;
 
 
 /**
@@ -32,6 +32,30 @@ import com.atguigu.gmall.pms.service.SpuInfoService;
 public class SpuInfoController {
     @Autowired
     private SpuInfoService spuInfoService;
+
+    @ApiOperation("分页查询(搜索)")
+    @PostMapping("page")
+    public Resp<List<SpuInfoEntity>> searchPage(@RequestBody QueryCondition queryCondition) {
+        IPage<SpuInfoEntity> page = this.spuInfoService.page(new Query<SpuInfoEntity>().getPage(queryCondition)
+                , new QueryWrapper<SpuInfoEntity>().eq("publish_status", "1"));
+        return Resp.ok(page.getRecords());
+    }
+
+
+    //（本分类）http://127.0.0.1:8888/pms/spuinfo?t=1578126831342&page=1&limit=10&key=&catId=
+    //(全站)http://127.0.0.1:8888/pms/spuinfo?t=1578126798271&page=1&limit=10&key=&catId=0
+
+    @GetMapping
+    public Resp<PageVo> querySpuInfoByCid(
+            QueryCondition queryCondition
+            ,@RequestParam(value = "catId",defaultValue = "0")Long cid){
+
+        PageVo pageVo = this.spuInfoService.querySpuInfoByCid(queryCondition,cid);
+
+        return Resp.ok(pageVo);
+    }
+
+
 
     /**
      * 列表
@@ -64,8 +88,8 @@ public class SpuInfoController {
     @ApiOperation("保存")
     @PostMapping("/save")
     @PreAuthorize("hasAuthority('pms:spuinfo:save')")
-    public Resp<Object> save(@RequestBody SpuInfoEntity spuInfo){
-		spuInfoService.save(spuInfo);
+    public Resp<Object> save(@RequestBody SpuInfoVo spuInfoVo){
+		spuInfoService.bigSave(spuInfoVo);
 
         return Resp.ok(null);
     }
@@ -90,7 +114,6 @@ public class SpuInfoController {
     @PreAuthorize("hasAuthority('pms:spuinfo:delete')")
     public Resp<Object> delete(@RequestBody Long[] ids){
 		spuInfoService.removeByIds(Arrays.asList(ids));
-
         return Resp.ok(null);
     }
 

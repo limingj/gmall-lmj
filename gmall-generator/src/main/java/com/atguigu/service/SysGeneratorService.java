@@ -8,12 +8,12 @@
 
 package com.atguigu.service;
 
-import com.atguigu.dao.GeneratorDao;
-import com.atguigu.utils.GenUtils;
-import com.atguigu.utils.Query;
+import com.atguigu.gmall.ums.dao.GeneratorDao;
+import com.atguigu.core.utils.GenUtils;
+import com.atguigu.core.utils.Query;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.atguigu.utils.PageUtils;
+import com.atguigu.core.utils.PageUtils;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

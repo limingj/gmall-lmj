@@ -26,6 +26,7 @@
         </dependency>
 
 
+
         <dependency>
             <groupId>com.atguigu</groupId>
             <artifactId>gmall-core</artifactId>

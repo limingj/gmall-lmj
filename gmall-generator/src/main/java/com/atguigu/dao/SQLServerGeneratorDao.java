@@ -1,5 +1,6 @@
 package com.atguigu.dao;
 
+import com.atguigu.gmall.ums.dao.GeneratorDao;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

@@ -16,5 +16,7 @@ import com.atguigu.core.bean.QueryCondition;
 public interface WareSkuService extends IService<WareSkuEntity> {
 
     PageVo queryPage(QueryCondition params);
+
+
 }
 

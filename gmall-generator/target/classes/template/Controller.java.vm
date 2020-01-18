@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Map;
 
 
-import com.atguigu.core.bean.PageVo;
-import com.atguigu.core.bean.QueryCondition;
-import com.atguigu.core.bean.Resp;
+import PageVo;
+import QueryCondition;
+import Resp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
