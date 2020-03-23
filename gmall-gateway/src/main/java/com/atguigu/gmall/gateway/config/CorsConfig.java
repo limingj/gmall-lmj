@@ -25,8 +25,6 @@ public class CorsConfig {
         corsConfiguration.addAllowedOrigin("Http://127.0.0.1:1000");
         corsConfiguration.setAllowCredentials(true);
 
-
-
 //        UrlBasedCorsConfigurationSource configSource = new UrlBasedCorsConfigurationSource();
 //        configSource.registerCorsConfiguration("/**",corsConfiguration);
 

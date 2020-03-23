@@ -5,6 +5,7 @@ import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
 import com.atguigu.gmall.pms.entity.SkuSaleAttrValueEntity;
 import com.atguigu.gmall.pms.service.SkuSaleAttrValueService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,14 @@ import java.util.List;
 public class SkuSaleAttrValueController {
     @Autowired
     private SkuSaleAttrValueService skuSaleAttrValueService;
+
+
+    @GetMapping("sku/{skuId}")
+    public Resp<List<SkuSaleAttrValueEntity>> querySaleAttrsBySkuId(@PathVariable("skuId") Long skuId){
+        List<SkuSaleAttrValueEntity> skuSaleAttrValueEntities = skuSaleAttrValueService.list(new QueryWrapper<SkuSaleAttrValueEntity>().eq("sku_id",skuId));
+        return Resp.ok(skuSaleAttrValueEntities);
+    }
+
 
     @GetMapping("{spuId}")
     public Resp<List<SkuSaleAttrValueEntity>> querySaleValueBySpuId(@PathVariable("spuId")Long spuId){

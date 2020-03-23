@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb574de8-4b67-45d4-aa30-a61f03ee4ab3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../gmall-core/src/main/java/com/atguigu/core/bean/QueryCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-core/src/main/java/com/atguigu/core/bean/QueryCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/gmall-generator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/GmallPmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/GmallPmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrAttrgroupRelationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrAttrgroupRelationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrGroupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SkuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SkuInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SpuInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SpuInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SpuInfoDescController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SpuInfoDescController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SpuInfoDescEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SpuInfoDescEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrAttrgroupRelationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrAttrgroupRelationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SkuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SkuInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SpuImagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SpuImagesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SpuInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SpuInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrAttrgroupRelationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrAttrgroupRelationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrGroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SkuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SkuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SpuInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-sms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-sms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SkuBoundsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SkuBoundsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SkuBoundsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SkuBoundsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SkuBoundsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SkuBoundsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-wms/src/main/java/com/atguigu/gmall/wms/controller/WareSkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-wms/src/main/java/com/atguigu/gmall/wms/controller/WareSkuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-wms/src/main/java/com/atguigu/gmall/wms/service/WareSkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-wms/src/main/java/com/atguigu/gmall/wms/service/WareSkuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-wms/src/main/java/com/atguigu/gmall/wms/service/impl/WareSkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-wms/src/main/java/com/atguigu/gmall/wms/service/impl/WareSkuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\atguigu\gmall_repository" />
+        <option name="mavenHome" value="E:/atcrowdfunding/apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="E:\atcrowdfunding\apache-maven-3.5.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-47" />
+    <option name="y" value="28" />
+    <option name="width" value="1748" />
+    <option name="height" value="1092" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../generator/pom.xml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="RenrenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-generator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.RenrenApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb574de8-4b67-45d4-aa30-a61f03ee4ab3" name="Default Changelist" comment="" />
+      <created>1578210698110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578210698110</updated>
+      <workItem from="1578210701699" duration="101000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="101000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-31" y="19" width="1165" height="728" extended-state="0" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24932249" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="ConsoleMavenPlugin" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/gmall-generator.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

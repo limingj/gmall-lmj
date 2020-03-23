@@ -33,6 +33,8 @@ public interface GmallPmsApi {
 			@RequestParam(value = "parentCid",required = false) Long pid);
 	@GetMapping("pms/productattrvalue/{spuId}")
 	public Resp<List<ProductAttrValueEntity>> searchAttrValues(@PathVariable ("spuId") Long spuId);
+	@GetMapping("pms/skusaleattrvalue/sku/{skuId}")
+	public Resp<List<SkuSaleAttrValueEntity>> querySaleAttrsBySkuId(@PathVariable("skuId") Long skuId);
 
 	@GetMapping("pms/skuinfo/info/{skuId}")
 	public Resp<SkuInfoEntity> quserySkuInfoByShuId(@PathVariable("skuId") Long skuId);
@@ -53,4 +55,6 @@ public interface GmallPmsApi {
 	);
 	@GetMapping("pms/skusaleattrvalue/{spuId}")
 	public Resp<List<SkuSaleAttrValueEntity>> querySaleValueBySpuId(@PathVariable("spuId")Long spuId);
-}
+
+
+	}

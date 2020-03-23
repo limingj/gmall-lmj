@@ -5,6 +5,7 @@ import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
 import com.atguigu.gmall.wms.entity.WareSkuEntity;
 import com.atguigu.gmall.wms.service.WareSkuService;
+import com.atguigu.gmall.wms.vo.SkuLockVo;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,7 +33,11 @@ public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;
 
-    //http://127.0.0.1:8888/wms/waresku/1
+    @PostMapping   //传Json数据，用post请求传递数据
+    public Resp<List<SkuLockVo>> checkAndLockStock(@RequestBody List<SkuLockVo> skuLockVos){
+        List<SkuLockVo> skuLockVoList = this.wareSkuService.checkAndLockStock(skuLockVos);
+        return Resp.ok(skuLockVoList);
+    }
 
     @GetMapping("{skuId}")
     public Resp<List<WareSkuEntity>> queryWareSkuBySkuId(@PathVariable("skuId")Long skuId){

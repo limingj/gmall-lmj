@@ -2,6 +2,9 @@ package com.atguig.gmall.index.config;
 
 import java.lang.annotation.*;
 
+/**
+ * 自定义注解
+ */
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited

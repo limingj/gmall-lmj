@@ -11,6 +11,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +33,9 @@ import java.util.List;
 public class SpuInfoController {
     @Autowired
     private SpuInfoService spuInfoService;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
     @ApiOperation("分页查询(搜索)")
     @PostMapping("page")
@@ -90,7 +94,6 @@ public class SpuInfoController {
     @PreAuthorize("hasAuthority('pms:spuinfo:save')")
     public Resp<Object> save(@RequestBody SpuInfoVo spuInfoVo){
 		spuInfoService.bigSave(spuInfoVo);
-
         return Resp.ok(null);
     }
 
@@ -102,7 +105,8 @@ public class SpuInfoController {
     @PreAuthorize("hasAuthority('pms:spuinfo:update')")
     public Resp<Object> update(@RequestBody SpuInfoEntity spuInfo){
 		spuInfoService.updateById(spuInfo);
-
+		//同步该spuId下的所有sku价格
+        this.amqpTemplate.convertAndSend("GMALL-PMS-EXCHANGN","item.update",spuInfo.getId());
         return Resp.ok(null);
     }
 

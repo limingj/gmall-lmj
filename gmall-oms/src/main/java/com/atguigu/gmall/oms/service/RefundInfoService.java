@@ -1,7 +1,7 @@
 package com.atguigu.gmall.oms.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.atguigu.gmall.oms.entity.RefundInfoEntity;
+import com.atguigu.oms.entity.RefundInfoEntity;
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
 

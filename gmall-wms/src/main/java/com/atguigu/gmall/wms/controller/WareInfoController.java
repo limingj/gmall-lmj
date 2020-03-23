@@ -1,21 +1,17 @@
 package com.atguigu.gmall.wms.controller;
 
-import java.util.Arrays;
-
-
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
 import com.atguigu.core.bean.Resp;
+import com.atguigu.gmall.wms.entity.WareInfoEntity;
+import com.atguigu.gmall.wms.service.WareInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import com.atguigu.gmall.wms.entity.WareInfoEntity;
-import com.atguigu.gmall.wms.service.WareInfoService;
-
-
+import java.util.Arrays;
 
 
 /**
@@ -29,9 +25,9 @@ import com.atguigu.gmall.wms.service.WareInfoService;
 @RestController
 @RequestMapping("wms/wareinfo")
 public class WareInfoController {
+
     @Autowired
     private WareInfoService wareInfoService;
-
     /**
      * 列表
      */

@@ -1,9 +1,12 @@
 package com.atguigu.gmall.wms.service;
 
+import com.atguigu.gmall.wms.vo.SkuLockVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.gmall.wms.entity.WareInfoEntity;
 import com.atguigu.core.bean.PageVo;
 import com.atguigu.core.bean.QueryCondition;
+
+import java.util.List;
 
 
 /**
@@ -16,5 +19,6 @@ import com.atguigu.core.bean.QueryCondition;
 public interface WareInfoService extends IService<WareInfoEntity> {
 
     PageVo queryPage(QueryCondition params);
+
 }
 

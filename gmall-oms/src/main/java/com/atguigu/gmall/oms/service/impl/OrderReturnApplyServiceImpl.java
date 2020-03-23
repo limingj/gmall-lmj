@@ -9,7 +9,7 @@ import com.atguigu.core.bean.Query;
 import com.atguigu.core.bean.QueryCondition;
 
 import com.atguigu.gmall.oms.dao.OrderReturnApplyDao;
-import com.atguigu.gmall.oms.entity.OrderReturnApplyEntity;
+import com.atguigu.oms.entity.OrderReturnApplyEntity;
 import com.atguigu.gmall.oms.service.OrderReturnApplyService;
 
 

@@ -9,7 +9,7 @@ import com.atguigu.core.bean.Query;
 import com.atguigu.core.bean.QueryCondition;
 
 import com.atguigu.gmall.oms.dao.PaymentInfoDao;
-import com.atguigu.gmall.oms.entity.PaymentInfoEntity;
+import com.atguigu.oms.entity.PaymentInfoEntity;
 import com.atguigu.gmall.oms.service.PaymentInfoService;
 
 

@@ -23,17 +23,18 @@ import java.util.concurrent.TimeUnit;
 @Aspect
 public class GmallCacheAspect {
 	//返回值必须Object
-	//形参
-	//方法必须抛出
-	//调用原始方法
+	//形参必须是ProceedingJoinPoint joinPoint  //切入点
+	//方法必须抛出Throwable异常
+	//执行原始方法：joinPoint.proceed(joinPoint.getArgs())
 
-	//execution(* *.*(..)) 拦截所有
-	//@Around("execution(* *.*(..))")
-	//拦截注解所在方法
+	//execution(* *.*(..)) 拦截所有切面
+	//@Around("execution(* *.*(..))")  通知
+
 	@Autowired
 	private StringRedisTemplate redisTemplate;
 	@Autowired
 	private RedissonClient redissonClient;
+	//拦截注解所在方法
 	@Around("@annotation(com.atguig.gmall.index.config.GmallCache)")
 	public Object around(ProceedingJoinPoint joinPoint) throws Throwable{
 		//获取方法对象
@@ -48,7 +49,7 @@ public class GmallCacheAspect {
 		//获取缓存数据
 		String key = prefix + args;
 		String cateJson = redisTemplate.opsForValue().get("");
-		//判断数据
+		//判断数据  不为空
 		if(StringUtils.isNotBlank(cateJson)){
 			return JSON.parseObject(cateJson,returnType);
 		}
@@ -56,6 +57,7 @@ public class GmallCacheAspect {
 		String lockName = gmallCache.lockName();
 		RLock fairLock = this.redissonClient.getFairLock(lockName + args);
 		fairLock.lock();
+
 		//再判断缓存
 		String cateJson2 = redisTemplate.opsForValue().get("");
 		//判断数据
@@ -63,12 +65,18 @@ public class GmallCacheAspect {
 			fairLock.unlock();
 			return JSON.parseObject(cateJson2,returnType);
 		}
+
+
 		//执行目标方法
 		Object result = joinPoint.proceed(joinPoint.getArgs());
 		//把数据放入缓存
-		this.redisTemplate.opsForValue().set(key,JSON.toJSONString(result)
-				                           ,gmallCache.timeout()+new Random().nextInt(gmallCache.bound()), TimeUnit.MINUTES);
+		this.redisTemplate.opsForValue().set(
+				key,
+				JSON.toJSONString(result) ,
+				gmallCache.timeout()+new Random().nextInt(gmallCache.bound()),
+				TimeUnit.MINUTES);
 		fairLock.unlock();
+
 		return result;
 	}
 }

@@ -9,7 +9,7 @@ import com.atguigu.core.bean.Query;
 import com.atguigu.core.bean.QueryCondition;
 
 import com.atguigu.gmall.oms.dao.RefundInfoDao;
-import com.atguigu.gmall.oms.entity.RefundInfoEntity;
+import com.atguigu.oms.entity.RefundInfoEntity;
 import com.atguigu.gmall.oms.service.RefundInfoService;
 
 

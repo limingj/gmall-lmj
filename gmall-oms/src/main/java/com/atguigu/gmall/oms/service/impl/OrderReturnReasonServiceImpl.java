@@ -9,7 +9,7 @@ import com.atguigu.core.bean.Query;
 import com.atguigu.core.bean.QueryCondition;
 
 import com.atguigu.gmall.oms.dao.OrderReturnReasonDao;
-import com.atguigu.gmall.oms.entity.OrderReturnReasonEntity;
+import com.atguigu.oms.entity.OrderReturnReasonEntity;
 import com.atguigu.gmall.oms.service.OrderReturnReasonService;
 
 

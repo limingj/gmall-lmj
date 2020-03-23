@@ -1,4 +1,4 @@
-package com.atguigu.gmall.oms.controller;
+package com.atguigu.gmall.controller;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import com.atguigu.gmall.oms.entity.PaymentInfoEntity;
+import com.atguigu.oms.entity.PaymentInfoEntity;
 import com.atguigu.gmall.oms.service.PaymentInfoService;
 
 

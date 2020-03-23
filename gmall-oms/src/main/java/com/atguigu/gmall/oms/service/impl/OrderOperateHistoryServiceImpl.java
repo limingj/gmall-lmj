@@ -9,7 +9,7 @@ import com.atguigu.core.bean.Query;
 import com.atguigu.core.bean.QueryCondition;
 
 import com.atguigu.gmall.oms.dao.OrderOperateHistoryDao;
-import com.atguigu.gmall.oms.entity.OrderOperateHistoryEntity;
+import com.atguigu.oms.entity.OrderOperateHistoryEntity;
 import com.atguigu.gmall.oms.service.OrderOperateHistoryService;
 
 

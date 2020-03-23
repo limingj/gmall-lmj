@@ -1,4 +1,4 @@
-package com.atguigu.gmall.oms.config;
+package com.atguigu.gmall.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
